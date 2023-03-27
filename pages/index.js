@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
-import NFTMint from "../components/NFTMint";
+import NFTmint from "../components/NFTmint";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "../styles/Home.module.css";
@@ -24,7 +24,7 @@ export default function Home() {
         <div>
           {supportedChains.includes(parseInt(chainId).toString()) ? (
             <div className="flex flex-row justify-center">
-              <NFTMint className="p-8" />
+              <NFTmint className="p-8" />
             </div>
           ) : (
             <div>{`Errore: rete non supportata. Passa a Goerli, Mumbai o Polygon`}</div>
