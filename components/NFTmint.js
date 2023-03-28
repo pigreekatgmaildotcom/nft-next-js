@@ -13,7 +13,6 @@ export default function NFTmint() {
 
   const [mintFee, setMintFee] = useState("0");
   const [numNFT, setNumNFT] = useState("0");
-  //const [balance, setBalance] = useState("0");
 
   const dispatch = useNotification();
 
@@ -51,13 +50,6 @@ export default function NFTmint() {
     params: {},
   });
 
-  /*const { runContractFunction: balanceOf } = useWeb3Contract({ //E' necessario definire balanceOf mediante override
-    abi: abi,
-    contractAddress: enneeffettiAddress,
-    functionName: "balanceOf",
-    params: { account: account },
-  });*/
-
   const {
     runContractFunction: mintNft,
     data: enterTxResponse,
@@ -74,10 +66,8 @@ export default function NFTmint() {
   async function updateUIValues() {
     const mintFeeFromCall = (await getMintFee()).toString();
     const numNFTFromCall = (await getTokenCounter()).toString();
-    //const balanceFromCall = (await balanceOf()).toString();
     setMintFee(mintFeeFromCall);
     setNumNFT(numNFTFromCall);
-    //setBalance(balanceFromCall);
   }
 
   useEffect(() => {

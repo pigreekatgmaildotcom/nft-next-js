@@ -7,7 +7,6 @@ import { useMoralis } from "react-moralis";
 import { supportedChains } from "../constants";
 
 const inter = Inter({ subsets: ["latin"] });
-//const supportedChains = ["31337", "5", "80001", "43113"];
 
 export default function Home() {
   const { isWeb3Enabled, chainId } = useMoralis();
