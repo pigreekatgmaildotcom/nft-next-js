@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import NFTmint from "../components/NFTmint";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "../styles/Home.module.css";
 import { useMoralis } from "react-moralis";
+import { supportedChains } from "../constants";
 
 const inter = Inter({ subsets: ["latin"] });
-const supportedChains = ["31337", "5", "80001"];
+//const supportedChains = ["31337", "5", "80001", "43113"];
 
 export default function Home() {
   const { isWeb3Enabled, chainId } = useMoralis();
@@ -27,7 +27,7 @@ export default function Home() {
               <NFTmint className="p-8" />
             </div>
           ) : (
-            <div>{`Errore: rete non supportata. Passa a Goerli, Mumbai o Polygon`}</div>
+            <div>{`Errore: rete non supportata. Passa a Goerli, Mumbai o Fuji`}</div>
           )}
         </div>
       ) : (
