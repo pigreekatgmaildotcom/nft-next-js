@@ -93,7 +93,7 @@ export default function NFTmint() {
     if (isWeb3Enabled && enneeffettiAddress) {
       updateUIValues();
     }
-  }, [isWeb3Enabled]);
+  }, [isWeb3Enabled, chainIdHex]);
 
   return (
     <div className="p-5">
