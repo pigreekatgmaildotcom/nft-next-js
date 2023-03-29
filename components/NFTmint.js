@@ -78,11 +78,11 @@ export default function NFTmint() {
 
   return (
     <div className="p-5">
-      <div class="tracking-wide font-sans text-7xl text-indigo-700 font-semibold text-center">
+      <div class="tracking-wide font-sans text-4xl lg:text-7xl text-indigo-700 font-semibold text-center">
         eNneeFfeTti
       </div>
       <br></br>
-      <div class="block mt-1 text-3xl font-sans leading-tight text-black text-center">
+      <div class="block mt-1 text-2xl lg:text-3xl font-sans leading-tight text-black text-center">
         Il tuo biglietto di ingresso per il mondo Web3
       </div>
       <br></br>
