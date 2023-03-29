@@ -127,13 +127,13 @@ export default function NFTmint() {
                   </p>
                   <p class="mt-2 text-slate-500 text-justify">
                     Questo NFT è rappresentativo di un&apos;opera originale che
-                    vive solo nel mondo digitale decentralizzato. L'opera
+                    vive solo nel mondo digitale decentralizzato. L&apos;opera
                     trasmette una vibrante energia che scaturisce
-                    dall’interazione delle forme geometriche rappresentate. Sono
-                    stati coniati complessivamente {numNFT} NFT rappresentativi
-                    di quest&apos;opera. Il costo dell&apos;NFT è di{" "}
-                    {ethers.utils.formatUnits(mintFee, "ether")} {currName}.
-                    Clicca sotto per coniare subito il tuo!
+                    dall&apos;interazione delle forme geometriche rappresentate.
+                    Sono stati coniati complessivamente {numNFT} NFT
+                    rappresentativi di quest&apos;opera. Il costo dell&apos;NFT
+                    è di {ethers.utils.formatUnits(mintFee, "ether")} {currName}
+                    . Clicca sotto per coniare subito il tuo!
                   </p>
                   <br></br>
                 </div>
