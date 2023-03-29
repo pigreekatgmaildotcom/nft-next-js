@@ -131,7 +131,7 @@ export default function NFTmint() {
                     trasmette una vibrante energia che scaturisce
                     dall’interazione delle forme geometriche rappresentate. Sono
                     stati coniati complessivamente {numNFT} NFT rappresentativi
-                    di quest’opera. Il costo dell’NFT è di{" "}
+                    di quest&apos;opera. Il costo dell&apos;NFT è di{" "}
                     {ethers.utils.formatUnits(mintFee, "ether")} {currName}.
                     Clicca sotto per coniare subito il tuo!
                   </p>
