@@ -11,6 +11,25 @@ export default function NFTmint() {
   const enneeffettiAddress =
     chainId in contractAddresses ? contractAddresses[chainId][0] : null;
 
+  var currName = "";
+
+  switch (chainId) {
+    case 31337:
+      currName = "ETH";
+      break;
+    case 5:
+      currName = "ETH";
+      break;
+    case 80001:
+      currName = "MATIC";
+      break;
+    case 43113:
+      currName = "AVAX";
+      break;
+    default:
+      currName = "ETH";
+  }
+
   const [mintFee, setMintFee] = useState("0");
   const [numNFT, setNumNFT] = useState("0");
 
@@ -89,11 +108,11 @@ export default function NFTmint() {
       <br></br>
       {enneeffettiAddress ? (
         <div className="">
-          <div class="max-w-md mx-auto bg-white rounded-xl shadow-2xl shadow-black/40 overflow-hidden md:max-w-3xl">
-            <div class="md:flex">
-              <div class="md:shrink-0">
+          <div class="max-w-lg mx-auto bg-white rounded-xl shadow-2xl shadow-black/40 overflow-hidden lg:max-w-4xl">
+            <div class="lg:flex">
+              <div class="lg:shrink-0">
                 <img
-                  class="h-96 w-full object-cover md:h-full md:w-96"
+                  class="h-100 w-full object-cover lg:h-full lg:w-96"
                   src="Enneeffetti.png"
                   alt="Passaporto per il Web3"
                 ></img>
@@ -107,15 +126,18 @@ export default function NFTmint() {
                     Il tuo fantastico NFT
                   </p>
                   <p class="mt-2 text-slate-500 text-justify">
-                    Questo NFT è la grande espressione di come arte e tecnologia
-                    si possano sposare. Il costo dell&apos;NFT è di{" "}
-                    {ethers.utils.formatUnits(mintFee, "ether")} ETH, e sono
-                    stati coniati un totale di {numNFT} NFT. Clicca sotto per
-                    coniare il tuo NFT!
+                    Questo NFT è rappresentativo di un&apos;opera originale che
+                    vive solo nel mondo digitale decentralizzato. L'opera
+                    trasmette una vibrante energia che scaturisce
+                    dall’interazione delle forme geometriche rappresentate. Sono
+                    stati coniati complessivamente {numNFT} NFT rappresentativi
+                    di quest’opera. Il costo dell’NFT è di{" "}
+                    {ethers.utils.formatUnits(mintFee, "ether")} {currName}.
+                    Clicca sotto per coniare subito il tuo!
                   </p>
                   <br></br>
                 </div>
-                <div class="basis-1/4 flex flex-col items-center justify-center">
+                <div class="flex flex-col items-center justify-center">
                   <button
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                     onClick={async function () {

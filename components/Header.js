@@ -3,7 +3,6 @@ import { useMoralis, useWeb3Contract } from "react-moralis";
 
 export default function Header() {
   const { chainId } = useMoralis();
-  const supportedChains = ["31337", "5", "80001", "43113"];
 
   var blockchainName = "";
 
