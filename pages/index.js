@@ -26,11 +26,29 @@ export default function Home() {
               <NFTmint className="p-8" />
             </div>
           ) : (
-            <div>{`Errore: rete non supportata. Passa a Goerli, Mumbai o Fuji`}</div>
+            <div className="flex items-center justify-center h-screen">
+              <div>
+                <div className="text-center tracking-wide font-sans text-4xl lg:text-7xl text-indigo-700 font-semibold">
+                  {`Oooops! :-(`}
+                </div>
+                <div className="py-4 text-md lg:text-2xl font-sans leading-tight text-black text-center">
+                  Rete non supportata. Passa a Goerli, Mumbai o Fuji
+                </div>
+              </div>
+            </div>
           )}
         </div>
       ) : (
-        <div>Please connect to a Wallet</div>
+        <div className="flex items-center justify-center h-screen">
+          <div>
+            <div className="text-center tracking-wide font-sans text-4xl lg:text-5xl text-indigo-700 font-semibold">
+              Per cominciare...
+            </div>
+            <div className="py-10 text-4xl lg:text-5xl font-sans leading-tight text-black text-center">
+              ...collega un wallet!
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
