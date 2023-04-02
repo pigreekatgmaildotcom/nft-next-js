@@ -16,7 +16,7 @@ export default function Home() {
         <title>Enneffetti</title>
         <meta name="description" content="Enneeffetti" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/NFTLogo.png" />
       </Head>
       <Header></Header>
       {isWeb3Enabled ? (
