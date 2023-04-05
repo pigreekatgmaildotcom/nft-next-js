@@ -5,6 +5,7 @@ export default function Header() {
   const { chainId } = useMoralis();
 
   var blockchainName = "";
+  var name = "";
 
   switch (parseInt(chainId)) {
     case 31337:
