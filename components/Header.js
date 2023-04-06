@@ -47,7 +47,7 @@ export default function Header() {
             size="40px"
           />
         ) : (
-          <div className="py-1 px-2 font-blog text-lg text-white">
+          <div className="py-2 px-2 font-blog text-lg text-white">
             Enneeffeti
           </div>
         )}
